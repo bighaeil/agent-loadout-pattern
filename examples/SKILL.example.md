@@ -3,7 +3,7 @@
 > A "skill" is the prompt a scheduled LLM routine runs. Note what is here and what is NOT:
 > the **mission** (judgment) is here; the **mechanics** are not — they live in the tools.
 
-## Toolbox — download at start
+## Loadout — download at start
 
 ```bash
 bash loadout.sh read_news notify
