@@ -2,13 +2,14 @@
 
 ## The core idea
 
-Normally a *skill* or a *routine* is a **procedure** — a fixed sequence of steps the system runs.
-The loadout pattern inverts that: an autonomous LLM — **the brain** — is handed a **purpose, not a
-procedure**, and *drives* the system itself, working out the steps and reaching for its own tools as
-it goes. Those tools come as a **loadout** — a curated, self-describing set drawn from a shared
-**toolbox** — and the brain is observed at the **interface** it calls, not by the side effects it
-leaves behind. The model is the driver; your system is the suit it wears. Everything below is how to
-build that.
+Conventional automation **executes** a procedure — code runs a fixed sequence of steps and decides
+nothing; same input, same path, every time. The loadout pattern keeps the steps but moves the
+*deciding* to the model. At each step the **brain** — an autonomous LLM — **judges**: what matters,
+which tool to reach for, whether to act at all. It's handed a **purpose** and the latitude to pursue
+it, and it *drives* — choosing its own tools as it goes. **Code executes; the brain decides.** Those
+tools come as a **loadout** — a curated, self-describing set drawn from a shared **toolbox** — and
+the brain is observed at the **interface** it calls, not by the side effects it leaves behind. The
+model is the driver; your system is the suit it wears. Everything below is how to build that.
 
 > Most LLM integrations bolt a model *into* your code. This is about the opposite: letting the
 > model **drive** your system — equipping itself, on its own initiative, with a **loadout**: the
@@ -44,9 +45,9 @@ watching a queue, reconciling a ledger. No one asked; the routine is its own cal
 on a cron — say, a headless Claude Code session every hour — and it is no longer a component inside
 your program. It's *outside*, periodically taking the wheel and deciding what to do.
 
-The line that matters isn't human-vs-cron. It's **following steps versus pursuing a goal**: a
-script executes a fixed procedure, while the brain is handed a *purpose* and finds its own way —
-and its own tools — to reach it.
+The line that matters isn't human-vs-cron — and it isn't even steps-or-no-steps. It's **executing
+versus deciding**: a script runs its steps and decides nothing, while the brain — even when it
+follows steps — *decides* at each one, choosing its own tools toward the goal.
 
 That inversion changes what your system should be.
 
@@ -229,10 +230,12 @@ Runnable examples are in [`examples/`](examples/).
 
 ## 핵심
 
-보통 *스킬*이나 *루틴*은 **절차**다 — 시스템이 실행하는 고정된 단계의 나열. 로드아웃 패턴은 그걸
-뒤집는다: 자율 LLM — **두뇌** — 에게 **절차가 아니라 목적**을 건네고, 두뇌가 직접 시스템을 *운전*한다
-— 단계를 스스로 궁리하고 필요한 도구를 직접 꺼내 가면서. 그 도구들은 공용 **도구 창고**에서 뽑아
-장착한 **로드아웃**(미션별로 큐레이션된 자기서술 묶음)으로 오고, 두뇌는 남긴 부작용이 아니라 *호출한*
+보통의 자동화는 **절차를 실행**한다 — 코드가 고정된 단계의 나열을 돌릴 뿐 아무것도 판단하지 않는다;
+같은 입력이면 늘 같은 경로. 로드아웃 패턴은 단계는 남기되 *판단*을 모델로 옮긴다. 각 단계에서 **두뇌**
+— 자율 LLM — 가 **판단한다**: 무엇이 중요한지, 어떤 도구를 잡을지, 아예 행동할지 말지. 두뇌는 고정된
+경로가 아니라 **목적**과 그것을 좇을 재량을 받고, 직접 *운전*한다 — 가면서 자기 도구를 고른다.
+**코드는 실행하고, 두뇌는 판단한다.** 그 도구들은 공용 **도구 창고**에서 뽑아 장착한
+**로드아웃**(미션별로 큐레이션된 자기서술 묶음)으로 오고, 두뇌는 남긴 부작용이 아니라 *호출한*
 **인터페이스**에서 관측된다. 모델이 운전자이고, 시스템은 그가 입는 슈트다. 아래 내용은 전부 그것을
 어떻게 짓는가다.
 
@@ -258,8 +261,9 @@ Runnable examples are in [`examples/`](examples/).
 시키지 않았다. 루틴이 자기 자신의 호출자다. cron이 헤드리스 LLM을 깨우면, 모델은 더 이상 프로그램
 안의 부품이 아니다. *바깥에서* 주기적으로 핸들을 잡고 무엇을 할지 스스로 정한다.
 
-핵심 경계는 사람이냐 cron이냐가 아니다. **절차를 따르느냐, 목적을 좇느냐**다. 스크립트는 고정된 절차를
-실행하지만, 두뇌는 *목적*을 받고 거기 닿을 자기만의 길과 도구를 스스로 찾는다.
+핵심 경계는 사람이냐 cron이냐가 아니다 — 단계가 있느냐 없느냐도 아니다. **실행하느냐, 판단하느냐**다.
+스크립트는 단계를 돌릴 뿐 아무것도 판단하지 않지만, 두뇌는 단계를 따르더라도 매 단계에서 *판단*한다 —
+목적을 향해 자기 도구를 고르면서.
 
 이 역전이 시스템의 형태를 바꾼다.
 
