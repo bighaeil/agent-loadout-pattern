@@ -34,6 +34,10 @@ watching a queue, reconciling a ledger. No one asked; the routine is its own cal
 on a cron — say, a headless Claude Code session every hour — and it is no longer a component inside
 your program. It's *outside*, periodically taking the wheel and deciding what to do.
 
+The line that matters isn't human-vs-cron. It's **following steps versus pursuing a goal**: a
+script executes a fixed procedure, while the brain is handed a *purpose* and finds its own way —
+and its own tools — to reach it.
+
 That inversion changes what your system should be.
 
 ## The metaphor: you, the brain, and the suit
@@ -233,8 +237,12 @@ Runnable examples are in [`examples/`](examples/).
 이 글이 다루는 건 다른 쪽이다 — **LLM이 스스로 알아서 하는 것.** 루틴이 정해진 시각에 깨어나 스스로
 일을 해낸다 — 매시간 뉴스를 정리하고 아침 브리핑을 올리고, 큐를 지켜보고, 장부를 맞춘다. 아무도
 시키지 않았다. 루틴이 자기 자신의 호출자다. cron이 헤드리스 LLM을 깨우면, 모델은 더 이상 프로그램
-안의 부품이 아니다. *바깥에서* 주기적으로 핸들을 잡고 무엇을 할지 스스로 정한다. 이 역전이 시스템의
-형태를 바꾼다.
+안의 부품이 아니다. *바깥에서* 주기적으로 핸들을 잡고 무엇을 할지 스스로 정한다.
+
+핵심 경계는 사람이냐 cron이냐가 아니다. **절차를 따르느냐, 목적을 좇느냐**다. 스크립트는 고정된 절차를
+실행하지만, 두뇌는 *목적*을 받고 거기 닿을 자기만의 길과 도구를 스스로 찾는다.
+
+이 역전이 시스템의 형태를 바꾼다.
 
 ## 비유: 당신, 두뇌, 그리고 슈트
 
