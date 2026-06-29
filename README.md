@@ -219,8 +219,6 @@ calls a model, and becomes a suit a capable model wears.
    runs it at wake to *download its loadout*.
 3. **Skills** = mission (judgment) + a loadout list. No mechanics. Let the brain *compose* tools;
    never auto-chain them in the wiring.
-4. **(Optional)** Add a pre-commit / CI check: every skill must carry a mission and a declared
-   loadout, and no raw mechanics may leak into a skill body.
 
 Runnable examples are in [`examples/`](examples/).
 
@@ -372,7 +370,5 @@ tlog() {  # tlog <event> [detail]   event: INVOKED | OK | DRY | ERR
    내려받음*.
 3. **스킬** = 미션(판단) + 로드아웃 목록. mechanics 없음. 두뇌가 도구를 *조합*하게 하고, 배관에서
    자동 연쇄하지 마라.
-4. **(선택)** pre-commit / CI 체크 추가: 모든 스킬은 미션과 선언된 로드아웃을 갖고, 스킬 본문에 생
-   mechanics가 새지 않도록.
 
 실행 가능한 예시는 [`examples/`](examples/)에 있다.
