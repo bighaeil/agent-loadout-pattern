@@ -2,11 +2,13 @@
 
 ## The core idea
 
-An autonomous LLM — **the brain** — is given a **purpose, not a procedure**. It *drives* the system:
-it wakes on its own, works out how to reach the goal, and reaches for its own tools to get there.
-Those tools arrive as a **loadout** — a curated, self-describing set drawn from a shared **toolbox** —
-and you watch the brain at the **interface** it calls, not by the side effects it leaves behind. The
-model is the driver; your system is the suit it wears. Everything below is how to build that.
+Normally a *skill* or a *routine* is a **procedure** — a fixed sequence of steps the system runs.
+The loadout pattern inverts that: an autonomous LLM — **the brain** — is handed a **purpose, not a
+procedure**, and *drives* the system itself, working out the steps and reaching for its own tools as
+it goes. Those tools come as a **loadout** — a curated, self-describing set drawn from a shared
+**toolbox** — and the brain is observed at the **interface** it calls, not by the side effects it
+leaves behind. The model is the driver; your system is the suit it wears. Everything below is how to
+build that.
 
 > Most LLM integrations bolt a model *into* your code. This is about the opposite: letting the
 > model **drive** your system — equipping itself, on its own initiative, with a **loadout**: the
@@ -227,11 +229,12 @@ Runnable examples are in [`examples/`](examples/).
 
 ## 핵심
 
-자율 LLM — **두뇌** — 에게는 **절차가 아니라 목적**이 주어진다. 두뇌는 시스템을 *운전*한다: 스스로
-깨어나, 목적에 닿을 방법을 궁리하고, 그걸 이룰 자기 도구를 직접 꺼내 쓴다. 그 도구들은 공용 **도구
-창고**에서 뽑아 장착한 **로드아웃**(미션별로 큐레이션된 자기서술 묶음)으로 온다. 그리고 두뇌는 남긴
-부작용이 아니라 *호출한* **인터페이스**에서 관측된다. 모델이 운전자이고, 당신의 시스템은 그가 입는
-슈트다. 아래 내용은 전부 그것을 어떻게 짓는가다.
+보통 *스킬*이나 *루틴*은 **절차**다 — 시스템이 실행하는 고정된 단계의 나열. 로드아웃 패턴은 그걸
+뒤집는다: 자율 LLM — **두뇌** — 에게 **절차가 아니라 목적**을 건네고, 두뇌가 직접 시스템을 *운전*한다
+— 단계를 스스로 궁리하고 필요한 도구를 직접 꺼내 가면서. 그 도구들은 공용 **도구 창고**에서 뽑아
+장착한 **로드아웃**(미션별로 큐레이션된 자기서술 묶음)으로 오고, 두뇌는 남긴 부작용이 아니라 *호출한*
+**인터페이스**에서 관측된다. 모델이 운전자이고, 시스템은 그가 입는 슈트다. 아래 내용은 전부 그것을
+어떻게 짓는가다.
 
 > 대부분의 LLM 통합은 모델을 당신 코드 *안에* 끼워 넣는다. 이 글은 그 반대다 — 모델이 시스템을
 > **운전**하게 하고, 스스로 필요할 때 미션에 맞는 **도구상자**(영어로는 *loadout*: 골라 장착한 키트)를
