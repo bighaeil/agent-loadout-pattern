@@ -169,13 +169,14 @@ implementation, the same routine can run in a **shadow mode** — where `notify`
 sends — with no change in the model's behavior. The boundary log is also the reliable way to audit
 a past run: it records what executed, not merely what the skill instructed.
 
-## It's a pattern, by design
+## A pattern, and its limit
 
-There is nothing here to install — no runtime, no base class, no inversion of control. The loadout
-pattern is a *shape* for tools and skills, adopted incrementally: convert one tool, point one
-routine at a loadout, and the rest of the system is untouched. It drops into any stack that can run
-a script and a prompt, and it composes with whatever you already use to call models. Keep it a
-pattern; reach for heavier machinery only when a concrete need forces it.
+This is a pattern, not a framework — and that's its honest limit: **nothing enforces it at
+runtime.** There's no base class, no inversion of control, nothing that *prevents* a routine from
+ignoring its loadout or inlining raw mechanics again. Adherence is a matter of discipline — or, if
+you want a guardrail, a CI check that every skill carries a mission and a declared loadout. What
+you get in exchange is lightness: nothing to install, and incremental adoption — one tool, one
+routine at a time, in any stack that runs a script and a prompt.
 
 ## Why it matters
 
@@ -297,12 +298,13 @@ tlog() {  # tlog <event> [detail]   event: INVOKED | OK | DRY | ERR
 감사하는 신뢰할 수 있는 방법이기도 하다 — 스킬이 무엇을 *지시*했는지가 아니라 무엇이 *실행*됐는지를
 남기기 때문이다.
 
-## 의도된 패턴이다
+## 패턴의 한계
 
-설치할 것이 없다 — 런타임도, 상속할 베이스 클래스도, 제어 역전도 없다. 로드아웃 패턴은 도구와
-스킬의 *형태*이고, 점진적으로 도입한다: 도구 하나를 옮기고, 루틴 하나를 로드아웃에 연결하면 나머지
-시스템은 그대로다. 스크립트와 프롬프트를 돌릴 수 있는 어떤 스택에도 끼워지고, 이미 쓰는 모델 호출
-방식과도 공존한다. 패턴으로 두고, 더 무거운 장치는 구체적 필요가 강제할 때만 꺼내라.
+이것은 프레임워크가 아니라 패턴이고, 그게 정직한 한계다: **런타임에서 강제되는 것이 없다.** 베이스
+클래스도, 제어 역전도, 루틴이 자기 로드아웃을 무시하거나 생 mechanics를 다시 inline하는 것을 *막는*
+장치도 없다. 준수는 규율의 문제다 — 가드레일이 필요하면 스킬이 미션과 선언된 로드아웃을 갖는지
+검사하는 CI 체크 하나. 대신 얻는 건 가벼움이다: 설치할 게 없고, 도구 하나·루틴 하나씩 점진적으로
+도입하며, 스크립트와 프롬프트를 돌리는 어떤 스택에도 끼워진다.
 
 ## 왜 중요한가
 
